@@ -11,22 +11,15 @@ for line in lines:
         result.append(cur)
         cur = []
     else:
-        cur.append(int(line.replace("\n", "")))
+        cur.append(int(line.strip()))
 
 max = sum(result[0])
-
-for i in result:
-    total = sum(i)
-    if total > max:
-        max = total
-
 top3 = [0,0,0]
+
 for i in result:
     total = sum(i)
     if total > min(top3):
         top3.remove(min(top3))
         top3.append(total)
 
-print(sum(top3))
-
-print(max)
+print(sum(top3), top3)
