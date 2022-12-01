@@ -1,4 +1,4 @@
-total = 0
+total = 1
 max = 0
 result = []
 cur = []
@@ -13,7 +13,6 @@ for line in lines:
     else:
         cur.append(int(line.strip()))
 
-max = sum(result[0])
 top3 = [0,0,0]
 
 for i in result:
