@@ -13,10 +13,12 @@ while i < len(lines):
         j = j + 1
     i = i + 1
 
+res = []
+
 for line in b:
     line = [i for i in line if i != 0]
     line.reverse()
-
+    res.append(line[len(line) - 1])
 
 #res.append(line[len(line) - 1])
 print(''.join(res))
